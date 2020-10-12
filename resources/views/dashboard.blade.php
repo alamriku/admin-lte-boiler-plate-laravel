@@ -8,8 +8,9 @@
                 <div class="small-box bg-info">
                     <div class="inner">
                         <h3>150</h3>
-
-                        <p>New Orders</p>
+                        {{session('locale')}}
+                        {{app()->getLocale()}}
+                        <p>{{__('name')}}</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>

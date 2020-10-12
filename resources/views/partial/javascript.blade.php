@@ -33,3 +33,28 @@
 <script src="{{'/'}}dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{'/'}}dist/js/demo.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('.language').on('click',function () {
+            event.preventDefault();
+
+
+
+            var $this = $(this);
+            var locale = $this.data('flag');
+
+            $.post('{{route('change-language')}}',{_token:'{{ csrf_token() }}', locale:locale}, function(data){
+                location.reload();
+                // setTimeout(function () {
+                //     location.reload();
+                // },10000);
+
+
+            });
+        });
+
+    });
+
+
+</script>

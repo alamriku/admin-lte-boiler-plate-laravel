@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Session;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       $this->middleware('auth');
     }
 
     /**
@@ -25,4 +27,6 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+
 }
